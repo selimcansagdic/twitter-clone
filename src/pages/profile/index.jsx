@@ -1,8 +1,7 @@
-export default function Explore() {
-    return (
-      <div>
-        <h1>Profile component</h1>
-      </div>
-    );
-  }
-  
+import { useParams } from "react-router-dom";
+
+export default function Profile() {
+  const { slug } = useParams();
+
+  return <div>Profile Page - {slug}</div>;
+}
