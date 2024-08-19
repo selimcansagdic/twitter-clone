@@ -10,13 +10,12 @@ export default function More({ close }) {
     <>
       {accounts.map((account) => (
         <button
-		type="button"
-		onClick={() => {setCurrentAccount(account) 
-		close()
-		}}
-		disabled = {currentAccount.id === account.id} 
-		
-
+          type="button"
+          onClick={() => {
+            setCurrentAccount(account);
+            close();
+          }}
+          disabled={currentAccount.id === account.id}
           className={classNames("py-3 px-4 flex items-center text-left  w-full transition-colors", {
             "hover:bg-[#eff3f41a]": currentAccount.id !== account.id,
           })}
@@ -25,7 +24,7 @@ export default function More({ close }) {
           <div className="mx-3 flex-1 text-[15px]">
             <h6 className="font-bold leading-[20px] ">{account.fullName}</h6>
 
-            <div className=" text-[#71767b]">@{account.userName}</div>
+            <div className=" text-primary">@{account.userName}</div>
           </div>
           {currentAccount.id === account.id && (
             <svg viewBox="0 0 24 24" className="mr-2 ml-3" width={18.75} height={18.75} fill="#00ba7c">

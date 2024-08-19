@@ -1,7 +1,5 @@
 import store from "../store";
 
-
-
 export const mainMenu = [
   {
     path: "/",
@@ -156,10 +154,9 @@ export const mainMenu = [
     },
   },
   {
-path: () => {
-  
-  return `/${store.getState()?.auth?.currentAccount?.userName}`
-},
+    path: () => {
+      return `/${store.getState()?.auth?.currentAccount?.userName}`;
+    },
     title: "Profile",
     icon: {
       active: (
@@ -181,3 +178,69 @@ path: () => {
     },
   },
 ];
+
+  export const topics = [
+    {
+      title: 'Türkiye tarihinde gündemde',
+      topic: {
+        type: 'tag',
+        value: 'türkiye'
+      }
+    },
+    {
+      title: 'Türkiye tarihinde gündemde',
+      topic: {
+        type: 'query',
+        value: 'Fenerbahçe'
+      },
+      postCount: 20340
+    },
+    {
+      title: 'Türkiye tarihinde gündemde',
+      topic: {
+        type: 'tag',
+        value: 'elonmusk'
+      }
+    },
+    {
+      title: 'Türkiye tarihinde gündemde',
+      topic: {
+        type: 'query',
+        value: 'Starlink'
+      },
+      postCount: 15640
+    },
+    {
+      title: 'Türkiye tarihinde gündemde',
+      topic: {
+        type: 'tag',
+        value: 'maymunçiçeği'
+      }
+    },
+    {
+      title: 'Türkiye tarihinde gündemde',
+      topic: {
+        type: 'query',
+        value: 'Eğitim'
+      },
+      postCount: 12640
+    },
+    {
+      title: 'Türkiye tarihinde gündemde',
+      topic: {
+        type: 'tag',
+        value: 'ekonomi'
+      }
+    },
+    {
+      title: 'Türkiye tarihinde gündemde',
+      topic: {
+        type: 'query',
+        value: 'Ali Koç'
+      },
+      postCount: 14340
+    }
+    
+  ]
+
+  
