@@ -5,14 +5,16 @@ import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
 export default function Topic({ item }) {
   return (
     <Link to="/" className="py-3 px-4 transition-colors hover:bg-white/[0.03] relative">
-      <div className="text-[13px] text-primary leading-4">{item.title}</div>
-      <div className="text-[15px] font-bold leading-5 mt-0.5">
+      <div className="text-[13px] [color:var(--color-base-secondary)] leading-4">{item.title}</div>
+      <div className="text-[15px]  font-bold leading-5 mt-0.5">
         {item.topic.type === "tag" && "#"}
         {item.topic.value}
       </div>
-      {item?.postCount && <div className="text-[13px] text-primary mt-1 leading-4">{numberFormat(item.postCount)} posts</div>}
+      {item?.postCount && (
+        <div className="text-[13px] [color:var(--color-base-secondary)] mt-1 leading-4">{numberFormat(item.postCount)} posts</div>
+      )}
       <Popover className="  absolute top-1.5 right-2">
-        <PopoverButton className="outline-none  w-[34.75px] h-[34.75px] rounded-full text-primary  flex items-center justify-center hover:bg-[#1d9bf01a] hover:text-[#1d9bf0] transition-colors">
+        <PopoverButton className="outline-none  w-[34.75px] h-[34.75px] rounded-full [color:var(--color-base-secondary)]  flex items-center justify-center hover:bg-[#1d9bf01a] hover:text-[#1d9bf0] transition-colors">
           <svg viewBox="0 0 24 24" width={18.75}>
             <path
               fill="currentColor"
@@ -20,10 +22,10 @@ export default function Topic({ item }) {
             />
           </svg>
         </PopoverButton>
-        <PopoverPanel className="w-[384px] rounded-xl grid absolute  top-2 overflow-hidden right-0 bg-black shadow-box z-[2]">
+        <PopoverPanel className="w-[384px] rounded-xl grid absolute  top-2 overflow-hidden right-0 bg-[color:var(--background-primary)] shadow-box z-[2]">
           <button
             type="button"
-            className="hover:bg-white/[0.05] transition-colors text-left text-[15px] text-[#e7e9ea] py-3 px-4 flex items-center gap-3 leading-5 font-bold "
+            className="hover:bg-white/[0.05] transition-colors text-left text-[15px]  py-3 px-4 flex items-center gap-3 leading-5 font-bold "
           >
             <svg viewBox="0 0 24 24" width={18.75}>
               <path
@@ -35,7 +37,7 @@ export default function Topic({ item }) {
           </button>
           <button
             type="button"
-            className="hover:bg-white/[0.05] transition-colors text-left text-[15px] text-[#e7e9ea] py-3 px-4 flex items-center gap-3 leading-5 font-bold "
+            className="hover:bg-white/[0.05] transition-colors text-left text-[15px] py-3 px-4 flex items-center gap-3 leading-5 font-bold "
           >
             <svg viewBox="0 0 24 24" width={18.75}>
               <path

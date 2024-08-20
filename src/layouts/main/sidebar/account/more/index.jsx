@@ -24,7 +24,7 @@ export default function More({ close }) {
           <div className="mx-3 flex-1 text-[15px]">
             <h6 className="font-bold leading-[20px] ">{account.fullName}</h6>
 
-            <div className=" text-primary">@{account.userName}</div>
+            <div className=" [color:var(--color-base-secondary)]">@{account.userName}</div>
           </div>
           {currentAccount.id === account.id && (
             <svg viewBox="0 0 24 24" className="mr-2 ml-3" width={18.75} height={18.75} fill="#00ba7c">
@@ -34,14 +34,14 @@ export default function More({ close }) {
         </button>
       ))}
       <div className="h-px bg-[#2f336] my-3" />
-      <button className="py-3 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full  font-bold  text-[#e7e9ea] text-[15px] leading-[20px] ">
+      <button className="py-3 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full  font-bold text-[15px] leading-[20px] ">
         Add an existing account
       </button>
-      <button className="py-3 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full font-bold  text-[#e7e9ea] text-[15px] leading-[20px]">
+      <button className="py-3 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full font-bold text-[15px] leading-[20px]">
         Manage accounts
       </button>
-      <button className="py-3 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full font-bold text-[#e7e9ea] text-[15px] leading-[20px]">
-        <div className="max-w-[228px]">@{currentAccount.username} Log out of account</div>
+      <button className="py-3 px-4 text-left transition-colors hover:bg-[#eff3f41a] w-full font-bold text-[15px] leading-[20px]">
+        <div className="max-w-[228px]"> Log out @{currentAccount.userName} </div>
       </button>
     </>
   );
