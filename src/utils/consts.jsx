@@ -214,7 +214,7 @@ export const mainMenu = [
       title: 'Türkiye tarihinde gündemde',
       topic: {
         type: 'tag',
-        value: 'maymunçiçeği'
+        value: 'imamoğlu'
       }
     },
     {
